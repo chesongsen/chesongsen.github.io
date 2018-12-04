@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="南枳">
+  
+
+  
+  
+  
+  
+  
+  
+  <title>沐语枫</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="title: 课堂笔记 mysql 02date: 2018-12-04 20:05:48tags:—复习关系型数据库Server -&amp;gt; Database -&amp;gt; Table -&amp;gt; Row -&amp;gt; ColumnMySQL数据库 服务器端启动 客户端连接 mysql.exe -h127.0.0.1 -P3306 -uroot -p mysql -uroot MySQL常用管理命">
+<meta property="og:type" content="article">
+<meta property="og:title" content="沐语枫">
+<meta property="og:url" content="http://yoursite.com/2018/12/04/课堂笔记-mysql-02/index.html">
+<meta property="og:site_name" content="沐语枫">
+<meta property="og:description" content="title: 课堂笔记 mysql 02date: 2018-12-04 20:05:48tags:—复习关系型数据库Server -&amp;gt; Database -&amp;gt; Table -&amp;gt; Row -&amp;gt; ColumnMySQL数据库 服务器端启动 客户端连接 mysql.exe -h127.0.0.1 -P3306 -uroot -p mysql -uroot MySQL常用管理命">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-04T12:12:41.674Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="沐语枫">
+<meta name="twitter:description" content="title: 课堂笔记 mysql 02date: 2018-12-04 20:05:48tags:—复习关系型数据库Server -&amp;gt; Database -&amp;gt; Table -&amp;gt; Row -&amp;gt; ColumnMySQL数据库 服务器端启动 客户端连接 mysql.exe -h127.0.0.1 -P3306 -uroot -p mysql -uroot MySQL常用管理命">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+</head></html>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="沐语枫" rel="home">沐语枫</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">北橘</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-课堂笔记-mysql-02" class="post-课堂笔记-mysql-02 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/04/课堂笔记-mysql-02/" data-id="cjp9pfb7s0001k4vmalq3g401" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <hr>
+<p>title: 课堂笔记 mysql 02<br>date: 2018-12-04 20:05:48<br>tags:<br>—复习<br>关系型数据库<br>Server -&gt; Database -&gt; Table -&gt; Row -&gt; Column<br>MySQL数据库<br> 服务器端启动<br> 客户端连接<br> mysql.exe -h127.0.0.1 -P3306 -uroot -p<br> mysql -uroot<br> MySQL常用管理命令<br>   quit/show databases/use 数据库名/show tables/desc 表名<br> SQL命令<br>标准SQL语句分类<br>DDL: Data Define Language 定义数据结构<br>  CREATE/DROP/ALTER<br>DML: Data Munipulate Language 操作数据<br>  INSERT/DELETE/UPDATE<br>DQL:Data Query Language 查询数据<br>  SELECT<br>DCL:Data Control Language 控制用户权限<br>  GRANT(授权)/REVOKE(收权)</p>
+<p>练习<br>    创建脚本文件xz.sql，创建数据库xz，进入该数据库；<br>    创建数据表user，包含uid、uname、upwd、email、phone、sex、userName(真实姓名)、registerTime(注册时间)、isOnline(是否在线)<br>    插入5条数据，删除其中2条数据，修改2条数据，最后查询结果。</p>
+<p>1.计算机存储字符<br> (1)如何存储英文字符<br>   ASCII: 总共有128个，对所有的英文字符及标点符号进行了编码。 Hello  -&gt; 72102108108111<br>   Latin-1: 总共有256个，兼容ASCII码，同时对欧洲符号进行了编码。MySQL默认就使用这种编码。<br> (2)如何存储中文字符<br>   GB2312: 对常用的6千多汉字进行了编码，兼容ASCII编码<br>   GBK: 对2万多个汉字进行了编码，兼容GB2312<br>   BIG5: 台湾繁体字编码，兼容ASCII<br>   Unicode: 对世界上主流的语言常用的字符进行了编码，兼容ASCII，不兼容GBK,GB2312,BIG5等系列。具体分为UTF-8、UTF-16、UTF-32等存储方案。<br> (3)解决MySQL存储中文乱码<br>   sql脚本文件存储的编码utf8<br>   客户端连接服务器端使用的编码为utf8<br>   服务器端创建数据库存储使用的编码为utf8</p>
+<p>练习：创建脚本文件01_dangdang.sql，创建数据库dangdang，设置编码为utf8，进入该数据库，创建保存图书数据的表book，包含bid、title、author(作者)、price(价格)、publish(出版社)、pubTime(出版时间)<br>  插入4条记录，修改第2条记录，删除第3条记录。</p>
+<p>2.MySQL中的列类型<br> 创建数据表的时候，指定的列可以存储的数据类型。<br>   CREATE  TABLE  book( bid  列类型);<br> (1)数值类型——引号可加可不加<br>   TINYINT  微整型，占1个字节  范围-128~127<br>   SMALLINT  小整型，占2个字节  范围-32768~32767<br>   INT  整型，占4个字节<br>          范围 -2147483648~2147483647<br>   BIGINT  大整型，占8个字节<br>   FLOAT  单精度浮点型，占4个字节，范围3.4e38，范围比INT大的多，可能产生计算误差。<br>   DOUBLE  双精度浮点型，占8个字节，范围比BIGINT大的多<br>   DECIMAL(M,D)  定点小数，不会产生计算误差，M代表总的有效位数，D代表小数点后的有效位数<br>   BOOL  布尔型，只有两个结果TRUE/1、FALSE/0，TRUE和FALSE不能添加引号；真正存储数据的时候，会使用TINYINT。<br> (2)日期时间类型——必须添加引号<br>   DATE  日期型   ‘2018-12-31’<br>   TIME  时间型   ‘14:22:30’<br>   DATETIME   日期时间型   ‘2018-12-31  14:22:30’<br> (3)字符串类型——必须添加引号<br>   VARCHAR(M)  变长字符串，不会产生空间浪费，操作速度相对较慢，M最大值是65535<br>   CHAR(M)   定长字符串，可能产生空间浪费，操作速度较快，M最大值是255；用于存储手机号码，身份证号等固定长度的字符。<br>   TEXT(M)  大型变长字符串，最多存2G<br>     CHAR(5)    VARCHAR(5)<br>a    a\0\0\0\0    a\0<br>ab    ab\0\0\0    ab\0<br>abc    abc\0\0    abc\0<br> CREATE  TABLE  t1(<br>   id  SMALLINT,<br>   age  TINYINT,<br>   commentCount INT,<br>   price  DECIMAL(6,2),<br>   phone  CHAR(11),<br>   article  VARCHAR(8000),<br>   pubTime  DATE<br> );</p>
+<p>练习：创建02_xuezi.sql脚本文件，创建数据库xuezi，使用UTF8，进入该数据库，创建保存笔记本数据的表laptop，包含lid，title、price、stockCount(库存量)、shelfTime(上架时间)、isIndex(是否为首页推荐)<br>  插入4条记录。<br>练习：创建脚本文件03_tedu.sql，创建数据库tedu，设置UTF8编码，进入该数据库。<br>  创建保存部门数据的表dept，包含did、dname(部门名称)、empCount(员工数量)<br>   10  研发部  3<br>   20  市场部  2<br>   30  运营部  2<br> 创建保存员工数据的表emp，包含eid、ename、sex、birthday(生日)、salary(工资)、deptId(所属部门的编号)<br> 插入4条记录</p>
+<p>3.列约束<br>  MySQL可以对插入的数据进行特定的验证，只有满足条件才允许插入到数据表中，否则被认为是非法的插入。<br>  例如：一个人的性别只能是男或者女，一个人的年龄0~100之间。<br> (1)主键约束——PRIMARY KEY<br>   声明了主键列上的值不能出现重复，表中查询的记录会按照主键由小到大排序——加快查找的速度；通常主键添加到编号列中。<br>  注意：一个表中只能有一个主键<br> (2)唯一约束——UNIQUE<br>  声明了唯一约束的列上不能插入重复的值，允许插入NULL，而且允许插入多个NULL<br> NULL表示空，在插入数据时，无法确定要保存的数据。例如：无法确定员工的姓名、工资。</p>
+<p>课后任务<br>  (1)复习今天内容，重新编写代码<br>  (2)练习：<br>    创建脚本文件xz.sql，创建数据库xz，设置编码UTF8，进入该数据库。<br>   创建保存笔记本分类的表xz_laptop_family(fid、fname、laptopCount笔记本数量)<br>   10 联想 2      20  戴尔 2     30 小米  3<br>   创建笔记本数据表 xz_laptop(lid、title、price、spec规格、detail详细介绍、shelfTime上架时间、isOnsale是否在售、familyId所属的分类编号)<br>   添加7条数据</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/12/04/课堂笔记-mysql-02/">
+    <time datetime="2018-12-04T12:05:48.755Z" class="entry-date">
+        2018-12-04
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2018/12/04/课堂笔记-mysql-01/" rel="next">(no title) <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s">
+        <input type="submit" id="searchsubmit" value="搜索">
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2018/12/04/课堂笔记-mysql-02/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/04/课堂笔记-mysql-01/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/04/课堂笔记01/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/01/内涵段子/">内涵段子</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/01/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2018 仝巧凤
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
