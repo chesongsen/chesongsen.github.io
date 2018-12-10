@@ -67,6 +67,79 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="post-课堂笔记-js-02" class="post-课堂笔记-js-02 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2018/12/10/课堂笔记-js-02/">课堂笔记-js 02</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/10/课堂笔记-js-02/" data-id="cjpi9bboc0000usvmzl69heob" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>复习<br>复杂查询<br>聚合查询/分组查询<br>  COUNT(*)/SUM()/AVG()/MAX()/MIN()<br>  GROUP BY<br>  YEAR()/MONTH()<br>子查询<br>  多个SQL语句，一个SQL语句的结果作为另一个SQL语句的条件<br>多表查询<br>  SELECT ename,dname FROM emp,dept WHERE deptId=did;<br>  内连接   表1 INNER JOIN 表2 ON…<br>  左外连接   表1 LEFT OUTER JOIN 表2 ON…<br>  右外连接   表1 RIGHT OUTER JOIN 表2 ON…<br>  全连接    UNION/UNION ALL<br> JS<br>   var x; //undefined<br>   x=1;<br>   var x,y,z=3;<br>   const pi=3.14;<br>学习一门编程语言的基本步骤<br> (1)了解背景知识：历史、现状、特点、应用场景<br> (2)搭建开发环境：编写hello world<br> (3)变量和常量<br> (4)数据类型<br> (5)运算符<br> (6)逻辑结构<br> (7)通用小程序<br> (8)函数和对象<br> (9)第三方库、框架<br> (10)实用的项目</p>
+<p>1.数据类型<br>  分为原始类型和引用类型<br>  原始类型分为数值型、字符串型、布尔型、未定义型(undefined)、null<br> (1)数值型<br>  分为整型和浮点型<br>  整型在内存占4个字节，浮点型占8个字节<br>  整型分为8进制(0开头)、10进制、16进制(0x开头)<br>  浮点型分为指数型和普通<br>       2.147e9<br> (2)字符串类型<br>   数据被引号所包含就是字符串类型，不区分单双引号。<br>   查看某一个字符的Unicode编码<br>     ‘t’.charCodeAt()<br> (3)布尔型<br>   在程序中表示真或者假<br>   true/false<br>   常用于一些是否的结果<br>     isVip、 isOnsale、isLogin<br> (4)未定义型<br>   声明了一个变量，未赋值结果是undefined<br> (5)空(null)<br>   用于引用数据类型<br> 检测数据类型<br>   typeof()<br>   number/string/boolean/undefined/object </p>
+<p>2.数据类型转换<br> (1)隐式转换<br>  ①数字+字符串：数字转成字符串<br>     1+’a’  // ‘1a’<br>  ②数字+布尔型：布尔型转成数字  true-&gt;1  false-&gt;0<br>     1+true  //2<br>     1+false  //1<br>  ③字符串+布尔型：布尔型转成字符串<br>     ‘a’+true  // ‘atrue’<br>  ④null的加法<br>    1+null    //1    null-&gt;0<br>    true+null //1     true-&gt;1  null-&gt;0<br>    ‘a’+null  //‘anull’    null-&gt;’null’<br>  练习：<br>  var num1=3,num2=true,num3=’hello’;<br>  console.log(num1+num2+num3); //‘4hello’<br>  console.log(num2+num3+num1);//‘truehello3’<br>  console.log(num3+num1+num2);//‘hello3true’</p>
+<ul>
+<li><ul>
+<li>/ 执行运算<br>尝试将符号两端的数据转成数值型（自动调用Number转换），如果无法转换，返回NaN（Not a Number）<br>总结：加号的作用<br>执行加法运算；执行字符串的拼接。<br>(2)强制转换<br>①将数据转成数值型<br>Number( )<br>将任意的数据转换成数值型，如果被转换的字符串中含有非数字，则返回NaN；布尔型会转成数值型。<br>②将数据转换成整型<br>parseInt()<br>parseInt(‘1.5’)// 1<br>查看数据的开始是否为数字，遇到非数字则返回前边的数字。<br>如果开头是非数字，则返回    NaN<br>③将数据转成浮点型<br>parseFloat()<br>练习：’1.5a’  ‘7.1a’  ‘a2.3’<br>④将数据转换成字符串<br>toString()<br>var pi=3.14;<br>pi.toString()</li>
+</ul>
+</li>
+</ul>
+<p>3.运算符和表达式<br> 由运算符连接的操作数据，所组成的形式称为表达式</p>
+<p> (1)算术运算符</p>
+<ul>
+<li><ul>
+<li><ul>
+<li>/  %  ++  –<br>%   取余<br>++  自增，在原来的基础之上加1<br>–   自减，在原来的基础之上减1<br>console.log(a++)  先打印a的值，然后再自增<br>console.log(++a)  先自增，然后再打印a的值<br>练习1：<br>var a=3;<br>console.log(a++  +  ++a);<br>a++先获取a的值(3)，执行自增；<br>++a先让a执行自增(5)，然后再获取a<br>练习2：<br>var b=5;<br>console.log(–b + b–);<br>–b 先让b执行自减(4)，获取b的值(4)<br>b– 先获取b的值(4), 然后执行自减</li>
+</ul>
+</li>
+</ul>
+<p>(2)比较运算符</p>
+<blockquote>
+<p>=  &lt;=  &gt;  &lt;  ==(等于)  !=  ===(全等于)  !==<br>返回的结果是布尔型的值<br>==   只是比较两个数据的值是否相同<br>===  不仅比较数据的值，还比较两个数据的类型是否相同<br>3&gt;’10’ // false<br>数字和字符串比较，字符串转成数值型<br>‘3’&gt;’10’ //true<br>两个字符串比较，比较的是Unicode码<br>3-&gt;51   1-&gt;49<br>3&gt;’10a’  //false<br>3&lt;’10a’  //false<br>3==’10a’//false<br>NaN和任何的数字比较(&gt; &lt;  &gt;=  &lt;=  ==  ===)返回false；<br>NaN==NaN  返回false</p>
+</blockquote>
+<p>(3)逻辑运算符<br>||  或者     &amp;&amp;  并且     非 !<br>|| 关联的两个条件只需要满足其一，结果就是true，否则false<br>&amp;&amp;  关联的两个条件都满足，结果是true，否则false<br>!  取反<br>逻辑短路<br>||  当第一个条件为true的时候，就不需要执行第二个条件<br>&amp;&amp; 当第一个条件为false的时候，就不需要执行第二个条件</p>
+<p>练习：下边的代码是否会报错<br>var a=3;<br>a&gt;5  &amp;&amp;  console.log(ename);<br>a&lt;1  ||  console.log(ename);</p>
+<p>(4)位运算符<br>将数据转成二进制然后执行运算<br>1  10  11  100  101  110  111  1000  1001…10000<br> 2        4                      8             16<br>101101=100000+1000+100+1</p>
+<pre><code>32   +  8  +  4  + 1
+</code></pre><p>56 = 32 + 16 + 8<br>   100000 + 10000 + 1000  = 111000<br>按位与(&amp;)  上下两位都是1，结果是1，否则是0<br>按位或(|)   上下两位含有1，结果是1，否则是0<br>按位异或(^) 上下两位相同是0，不同是1<br>按位右移(&gt;&gt;) 删除二进制的最后n位，大概变小到原来一般<br>按位左移(&lt;&lt;) 在二进制的最后添加0，变大到原来一倍<br>练习： 5&amp;9=1   8|10=10   6^12=10<br>0101     1000       0110<br>1001     1010       1100</p>
+<p>(5)赋值运算符<br>=   +=  -=  *=   /=   %=<br>在原来的基础之上进行加减乘除取余<br>x+=3;</p>
+</li>
+</ul>
+<p>课后任务：<br>  (1)复习今天内容，整理思维导图<br>  (2)练习：<br>    声明一个变量保存年份，如果是闰年，打印“是闰年”(逻辑短路)<br>    闰年标准：4年一个闰年（能被4整除），并且不能100整除；或者能被400整除<br>  (3)预习逻辑结构(if  if-else  if-else 嵌套)</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/12/10/课堂笔记-js-02/">
+    <time datetime="2018-12-10T11:46:55.000Z" class="entry-date">
+        2018-12-10
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="post-课堂笔记-js-01" class="post-课堂笔记-js-01 post type-post status-publish format-standard hentry">
     <!---->
 
@@ -82,7 +155,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/06/课堂笔记-js-01/" data-id="cjpclbr390003wkvmgp23a7z2" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/06/课堂笔记-js-01/" data-id="cjpi9bbor0003usvm92oyaxqo" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -123,7 +196,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/06/课堂笔记-mysql-04/" data-id="cjpclbr390005wkvm1yklugpx" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/06/课堂笔记-mysql-04/" data-id="cjpi9bbp70008usvmll1t9s4k" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -173,7 +246,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/05/课堂笔记-mysql-03/" data-id="cjpclbr390006wkvmnjg6hy3f" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/05/课堂笔记-mysql-03/" data-id="cjpi9bbor0005usvmrksdum3v" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -225,7 +298,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/04/单词/" data-id="cjpclbr390008wkvmvffuwl5k" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/04/单词/" data-id="cjpi9bbp70007usvmrn81abu0" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -260,7 +333,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/04/课堂笔记-mysql-02/" data-id="cjpclbr390004wkvmd4jo6eak" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/04/课堂笔记-mysql-02/" data-id="cjpi9bbor0006usvmrv6brfz1" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -303,7 +376,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/04/课堂笔记-mysql-01/" data-id="cjpclbr390001wkvmedbh94p4" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/04/课堂笔记-mysql-01/" data-id="cjpi9bbor0004usvmzz861zkz" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -348,7 +421,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/04/课堂笔记01/" data-id="cjpclbr390007wkvm1haeqtyl" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/04/课堂笔记01/" data-id="cjpi9bbp70009usvmh537r6bo" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -400,7 +473,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/01/内涵段子/" data-id="cjpclbr390002wkvmj9bdmd2u" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/01/内涵段子/" data-id="cjpi9bbor0001usvmbra7ta4h" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -443,7 +516,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/01/hello-world/" data-id="cjpclbr2u0000wkvm73wk6v9l" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/01/hello-world/" data-id="cjpi9bbor0002usvmegad0voh" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -502,6 +575,10 @@
       <ul>
         
           <li>
+            <a href="/2018/12/10/课堂笔记-js-02/">课堂笔记-js 02</a>
+          </li>
+        
+          <li>
             <a href="/2018/12/06/课堂笔记-js-01/">课堂笔记-js 01</a>
           </li>
         
@@ -515,10 +592,6 @@
         
           <li>
             <a href="/2018/12/04/单词/">单词</a>
-          </li>
-        
-          <li>
-            <a href="/2018/12/04/课堂笔记-mysql-02/">(no title)</a>
           </li>
         
       </ul>
