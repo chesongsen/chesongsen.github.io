@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="南枳">
+  
+
+  
+  
+  
+  
+  
+  
+  <title>课堂笔记-js 03 | 沐语枫</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="复习  原始类型和引用类型  数值型   21   2.1e9  字符串型   ‘1’    charCodeAt()  布尔型   true/false  未定义型  undefined  空  null  typeof  隐式转换   数值+字符串   数值+布尔型  布尔型+字符串 -  *  /  转数值    自动调用Number   强制转换   Number()  true/fals">
+<meta property="og:type" content="article">
+<meta property="og:title" content="课堂笔记-js 03">
+<meta property="og:url" content="http://yoursite.com/2018/12/10/课堂笔记-js-03/index.html">
+<meta property="og:site_name" content="沐语枫">
+<meta property="og:description" content="复习  原始类型和引用类型  数值型   21   2.1e9  字符串型   ‘1’    charCodeAt()  布尔型   true/false  未定义型  undefined  空  null  typeof  隐式转换   数值+字符串   数值+布尔型  布尔型+字符串 -  *  /  转数值    自动调用Number   强制转换   Number()  true/fals">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-10T12:06:08.003Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="课堂笔记-js 03">
+<meta name="twitter:description" content="复习  原始类型和引用类型  数值型   21   2.1e9  字符串型   ‘1’    charCodeAt()  布尔型   true/false  未定义型  undefined  空  null  typeof  隐式转换   数值+字符串   数值+布尔型  布尔型+字符串 -  *  /  转数值    自动调用Number   强制转换   Number()  true/fals">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+</head></html>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="沐语枫" rel="home">沐语枫</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">北橘</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-课堂笔记-js-03" class="post-课堂笔记-js-03 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      课堂笔记-js 03
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/10/课堂笔记-js-03/" data-id="cjpi9tzzv0005m8vmj0gyzhqx" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>复习<br>  原始类型和引用类型<br>  数值型   21   2.1e9<br>  字符串型   ‘1’    charCodeAt()<br>  布尔型   true/false<br>  未定义型  undefined<br>  空  null<br>  typeof<br>  隐式转换   数值+字符串   数值+布尔型  布尔型+字符串</p>
+<pre><code>-  *  /  转数值    自动调用Number
+</code></pre><p>  强制转换   Number()  true/false  1/0<br>    parseInt()/parseFloat()/toString()<br>运算符<br>   算术运算符  +  -  <em>  /   %  ++   –<br>   比较运算符  &gt; &lt; &gt;= &lt;= == != === !==<br>   逻辑运算符  ||   &amp;&amp;  !<br>   位运算符    &amp;  |  ^  &gt;&gt;  &lt;&lt;<br>   赋值运算符  =  +=  -=  </em>=  /=  %=</p>
+<p>学习一门编程语言的基本步骤<br> (1)了解背景知识：历史、现状、特点、应用场景<br> (2)搭建开发环境：编写hello world<br> (3)变量和常量<br> (4)数据类型<br> (5)运算符<br> (6)逻辑结构<br> (7)通用小程序<br> (8)函数和对象<br> (9)第三方库、框架<br> (10)实用的项目</p>
+<p>1.运算符——三目运算符<br> 由三个运算数或表达式组成的结构<br> 条件表达式 ? 表达式1 : 表达式2<br> 如果条件表达式为true，执行表达式1；<br> 如果条件表达式为false，执行表达式2；</p>
+<p>2.两个浏览器端函数<br> alert()  弹出警示框<br> prompt()  弹出提示(输入)框，输入的值是字符串类型</p>
+<p>3.流程控制<br> 程序=数据+算法<br> 程序分为顺序执行、选择执行、循环执行<br> (1)if语句<br> 语句1;<br> if(条件表达式){<br>   语句2;<br> }<br> 语句3;<br>  ①执行语句1<br>  ②如果条件表达式为true，执行语句2<br>  ③执行语句3</p>
+<p> (2)if-else语句<br>  语句1;<br>  if(条件表达式){<br>    语句2;<br>  }else{<br>    语句3;<br>  }<br>    语句4;<br>  执行过程：<br>   ①执行语句1<br>   ②执行条件表达式，如果是true，执行语句2；如果是false，执行语句3<br>   ③执行语句4；</p>
+<p>练习1：声明变量保存成绩，如果超过60分，打印及格；否则打印不及格。<br>练习2：声明两个变量存储账号和密码，如果账号是root，并且密码是123456，打印登录成功；否则打印登录失败。<br>练习3：使用弹出提示框分别输入商品的价格和数量，如果总价满500打九折，打印应付金额；使用变量存储当前会员卡的余额，<br>    如果余额足够支付，打印支付成功，否则打印余额不足。<br>  06_exercise.html   06_exercise.js</p>
+<p>如果if和else后的大括号中只有一行代码，则大括号可以省略<br>if(score&gt;=60)  console.log(‘及格’);<br> 条件表达式中几个特殊的情况<br>undefined、null、0、’’、NaN 在条件表达式中都表示false</p>
+<p> (3)if-else嵌套<br>  用于判断多种情况<br>  语句0;<br>  if(条件表达式1){<br>    语句1;<br>  }else if(条件表达式2){<br>    语句2;<br>  }else … if(条件表达式n){<br>    语句n;<br>  }else{<br>    语句n+1;  //以上所有的条件表达式均为false<br>  }</p>
+<p>  执行过程：<br>   ①执行语句0<br>   ②执行条件表达式1<br>     如果条件表达式1为true，执行语句1<br>     如果条件表达式1为false，执行条件表达式2<br>        如果条件表达式2为true，执行语句2<br>        如果条件表达式2为false，执行条件表达式n<br>   ③如果以上所有的条件表达式都为false，执行语句n+1</p>
+<p> (4)switch-case<br>   和if-else类似，是一种特殊的多项分支语句<br>语句0;<br>switch(表达式){<br>  case 1:    //如果表达式的值为1<br>    语句1….<br>    break;<br>  …<br>  case n:<br>    语句n…<br>    break;<br>  default:<br>    语句n+1;  //以上所有的条件都是false<br>}<br>  说明：表达式和case中的值比较的时候使用的是全等于(===)。<br> 对比if-else嵌套和switch-case语句<br> 相同点：两者都可以用于多项分支语句<br> 不同点：if-else既可以判断相等，又可以判断不相等，适用范围比较广；switch-case只适用于全等的情况，<br>     在结构上更为清晰合理，执行效率相对比较高。</p>
+<p>2.循环执行<br> 循环：就是一遍又一遍执行相同或者相似的代码<br> 循环的两个要素<br>   循环的条件：控制循环的次数<br>   循环体：重复执行的相同或者相似代码<br> while循环<br>while(循环条件){<br>  循环体<br>}</p>
+<p>课后任务：<br>  (1)复习今天内容，整理思维导图<br>  (2)练习：<br>    使用switch-case判断一个人的成绩标准（分数/10,取整）<br>       100<br>       90~100以下<br>       80~90以下  ….<br>    使用循环打印 10~1<br>    使用循环打印 20  22  24  26  28  30<br>  (3)预习do-while、for循环</p>
+<p>程序员必做50题<br><a href="https://wenku.baidu.com/view/af66e2f14afe04a1b071de42.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/af66e2f14afe04a1b071de42.html</a></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/12/10/课堂笔记-js-03/">
+    <time datetime="2018-12-10T12:00:56.000Z" class="entry-date">
+        2018-12-10
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2018/12/10/课堂笔记-js-02/" rel="next">课堂笔记-js 02 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s">
+        <input type="submit" id="searchsubmit" value="搜索">
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2018/12/10/课堂笔记-js-03/">课堂笔记-js 03</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/10/课堂笔记-js-02/">课堂笔记-js 02</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/06/课堂笔记-js-01/">课堂笔记-js 01</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/06/课堂笔记-mysql-04/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/05/课堂笔记-mysql-03/">课堂笔记 mysql 03</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2018 仝巧凤
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

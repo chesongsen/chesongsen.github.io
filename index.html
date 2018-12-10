@@ -67,6 +67,64 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="post-课堂笔记-js-03" class="post-课堂笔记-js-03 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2018/12/10/课堂笔记-js-03/">课堂笔记-js 03</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/10/课堂笔记-js-03/" data-id="cjpi9tzzv0005m8vmj0gyzhqx" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>复习<br>  原始类型和引用类型<br>  数值型   21   2.1e9<br>  字符串型   ‘1’    charCodeAt()<br>  布尔型   true/false<br>  未定义型  undefined<br>  空  null<br>  typeof<br>  隐式转换   数值+字符串   数值+布尔型  布尔型+字符串</p>
+<pre><code>-  *  /  转数值    自动调用Number
+</code></pre><p>  强制转换   Number()  true/false  1/0<br>    parseInt()/parseFloat()/toString()<br>运算符<br>   算术运算符  +  -  <em>  /   %  ++   –<br>   比较运算符  &gt; &lt; &gt;= &lt;= == != === !==<br>   逻辑运算符  ||   &amp;&amp;  !<br>   位运算符    &amp;  |  ^  &gt;&gt;  &lt;&lt;<br>   赋值运算符  =  +=  -=  </em>=  /=  %=</p>
+<p>学习一门编程语言的基本步骤<br> (1)了解背景知识：历史、现状、特点、应用场景<br> (2)搭建开发环境：编写hello world<br> (3)变量和常量<br> (4)数据类型<br> (5)运算符<br> (6)逻辑结构<br> (7)通用小程序<br> (8)函数和对象<br> (9)第三方库、框架<br> (10)实用的项目</p>
+<p>1.运算符——三目运算符<br> 由三个运算数或表达式组成的结构<br> 条件表达式 ? 表达式1 : 表达式2<br> 如果条件表达式为true，执行表达式1；<br> 如果条件表达式为false，执行表达式2；</p>
+<p>2.两个浏览器端函数<br> alert()  弹出警示框<br> prompt()  弹出提示(输入)框，输入的值是字符串类型</p>
+<p>3.流程控制<br> 程序=数据+算法<br> 程序分为顺序执行、选择执行、循环执行<br> (1)if语句<br> 语句1;<br> if(条件表达式){<br>   语句2;<br> }<br> 语句3;<br>  ①执行语句1<br>  ②如果条件表达式为true，执行语句2<br>  ③执行语句3</p>
+<p> (2)if-else语句<br>  语句1;<br>  if(条件表达式){<br>    语句2;<br>  }else{<br>    语句3;<br>  }<br>    语句4;<br>  执行过程：<br>   ①执行语句1<br>   ②执行条件表达式，如果是true，执行语句2；如果是false，执行语句3<br>   ③执行语句4；</p>
+<p>练习1：声明变量保存成绩，如果超过60分，打印及格；否则打印不及格。<br>练习2：声明两个变量存储账号和密码，如果账号是root，并且密码是123456，打印登录成功；否则打印登录失败。<br>练习3：使用弹出提示框分别输入商品的价格和数量，如果总价满500打九折，打印应付金额；使用变量存储当前会员卡的余额，<br>    如果余额足够支付，打印支付成功，否则打印余额不足。<br>  06_exercise.html   06_exercise.js</p>
+<p>如果if和else后的大括号中只有一行代码，则大括号可以省略<br>if(score&gt;=60)  console.log(‘及格’);<br> 条件表达式中几个特殊的情况<br>undefined、null、0、’’、NaN 在条件表达式中都表示false</p>
+<p> (3)if-else嵌套<br>  用于判断多种情况<br>  语句0;<br>  if(条件表达式1){<br>    语句1;<br>  }else if(条件表达式2){<br>    语句2;<br>  }else … if(条件表达式n){<br>    语句n;<br>  }else{<br>    语句n+1;  //以上所有的条件表达式均为false<br>  }</p>
+<p>  执行过程：<br>   ①执行语句0<br>   ②执行条件表达式1<br>     如果条件表达式1为true，执行语句1<br>     如果条件表达式1为false，执行条件表达式2<br>        如果条件表达式2为true，执行语句2<br>        如果条件表达式2为false，执行条件表达式n<br>   ③如果以上所有的条件表达式都为false，执行语句n+1</p>
+<p> (4)switch-case<br>   和if-else类似，是一种特殊的多项分支语句<br>语句0;<br>switch(表达式){<br>  case 1:    //如果表达式的值为1<br>    语句1….<br>    break;<br>  …<br>  case n:<br>    语句n…<br>    break;<br>  default:<br>    语句n+1;  //以上所有的条件都是false<br>}<br>  说明：表达式和case中的值比较的时候使用的是全等于(===)。<br> 对比if-else嵌套和switch-case语句<br> 相同点：两者都可以用于多项分支语句<br> 不同点：if-else既可以判断相等，又可以判断不相等，适用范围比较广；switch-case只适用于全等的情况，<br>     在结构上更为清晰合理，执行效率相对比较高。</p>
+<p>2.循环执行<br> 循环：就是一遍又一遍执行相同或者相似的代码<br> 循环的两个要素<br>   循环的条件：控制循环的次数<br>   循环体：重复执行的相同或者相似代码<br> while循环<br>while(循环条件){<br>  循环体<br>}</p>
+<p>课后任务：<br>  (1)复习今天内容，整理思维导图<br>  (2)练习：<br>    使用switch-case判断一个人的成绩标准（分数/10,取整）<br>       100<br>       90~100以下<br>       80~90以下  ….<br>    使用循环打印 10~1<br>    使用循环打印 20  22  24  26  28  30<br>  (3)预习do-while、for循环</p>
+<p>程序员必做50题<br><a href="https://wenku.baidu.com/view/af66e2f14afe04a1b071de42.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/af66e2f14afe04a1b071de42.html</a></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/12/10/课堂笔记-js-03/">
+    <time datetime="2018-12-10T12:00:56.000Z" class="entry-date">
+        2018-12-10
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="post-课堂笔记-js-02" class="post-课堂笔记-js-02 post type-post status-publish format-standard hentry">
     <!---->
 
@@ -82,7 +140,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/10/课堂笔记-js-02/" data-id="cjpi9jybe0003zsvm2q9ef42m" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/10/课堂笔记-js-02/" data-id="cjpi9tzzv0004m8vmqk6yj0tx" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -138,7 +196,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/06/课堂笔记-js-01/" data-id="cjpi9jybe0004zsvmmvpl28ig" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/06/课堂笔记-js-01/" data-id="cjpi9tzzv0002m8vmd7ndbukr" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -179,7 +237,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/06/课堂笔记-mysql-04/" data-id="cjpi9jybe0008zsvmswtupip2" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/06/课堂笔记-mysql-04/" data-id="cjpi9u00b0009m8vmijz7nt7m" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -229,7 +287,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/05/课堂笔记-mysql-03/" data-id="cjpi9jybe0007zsvm4f5f8o86" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/05/课堂笔记-mysql-03/" data-id="cjpi9u00b0008m8vms60jxnn9" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -281,7 +339,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/04/单词/" data-id="cjpi9jybe0001zsvm5ln7hgv3" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/04/单词/" data-id="cjpi9tzzv0003m8vmoqy4b8lc" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -316,7 +374,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/04/课堂笔记-mysql-02/" data-id="cjpi9jybe0006zsvmcooljmvk" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/04/课堂笔记-mysql-02/" data-id="cjpi9tzzv0007m8vmjmrzf7ot" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -359,7 +417,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/04/课堂笔记-mysql-01/" data-id="cjpi9jybe0005zsvmf3x8hvrm" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/04/课堂笔记-mysql-01/" data-id="cjpi9tzzv0006m8vmkc3ugloo" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -404,7 +462,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/04/课堂笔记01/" data-id="cjpi9jybu0009zsvma92tgecb" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/04/课堂笔记01/" data-id="cjpi9u00b000am8vmu0cgz4nk" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -456,7 +514,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/01/内涵段子/" data-id="cjpi9jybe0002zsvmwbyav4gw" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/01/内涵段子/" data-id="cjpi9tzzv0000m8vm7nu2c2fi" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -484,57 +542,12 @@
 
 
   
-    <article id="post-hello-world" class="post-hello-world post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2018/12/01/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/12/01/hello-world/" data-id="cjpi9jyay0000zsvmpe90v85f" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2018/12/01/hello-world/">
-    <time datetime="2018-12-01T05:34:30.810Z" class="entry-date">
-        2018-12-01
-    </time>
-</a>
-    
-    
-    </footer>
-</article>
-
-
-
-
-
-
-  
+    <nav id="pagination">
+      <nav id="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      </nav>
+    </nav>
   
 
 </div></div>
@@ -558,6 +571,10 @@
       <ul>
         
           <li>
+            <a href="/2018/12/10/课堂笔记-js-03/">课堂笔记-js 03</a>
+          </li>
+        
+          <li>
             <a href="/2018/12/10/课堂笔记-js-02/">课堂笔记-js 02</a>
           </li>
         
@@ -571,10 +588,6 @@
         
           <li>
             <a href="/2018/12/05/课堂笔记-mysql-03/">课堂笔记 mysql 03</a>
-          </li>
-        
-          <li>
-            <a href="/2018/12/04/单词/">单词</a>
           </li>
         
       </ul>
